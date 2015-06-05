@@ -7,7 +7,7 @@ my $gb_file = shift || "data/Genbank_example.txt";
 
 my $file_contents = "";
 
-open FH, "<", $gb_file;
+open FH, "<:crlf", $gb_file;
 while (my $line = readline FH) {
 	$file_contents .= $line;
 }
